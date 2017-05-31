@@ -1,0 +1,291 @@
+<!doctype html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="#up2u Danish municipal elections 2017 vote"/>
+<meta name="keywords" content="danish, municipal, election, 2017" />
+<meta name="authoring-tool" content="Adobe_Animate_CC">
+<title>#up2u Danish municipal elections</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="css/mobile.css" media="screen and (max-width: 700px)">
+<link rel="stylesheet" type="text/css" href="css/small.css" media="screen and (min-width: 701px)">
+<link rel="stylesheet" type="text/css" href="css/medium.css" media="screen and (min-width: 901px)">
+<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400" rel="stylesheet">
+<script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+<script src="project.js?1496176568239"></script>
+<style>
+  #animation_container, #_preload_div_ {
+	position:absolute;
+	margin:auto;
+	left:0;right:0;
+	top:0;bottom:0;
+  }
+</style>
+<script>
+var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
+function init() {
+	canvas = document.getElementById("canvas");
+	anim_container = document.getElementById("animation_container");
+	dom_overlay_container = document.getElementById("dom_overlay_container");
+	var loader = new createjs.LoadQueue(false);
+	loader.addEventListener("complete", handleComplete);
+	loader.loadManifest(lib.properties.manifest);
+}
+function handleComplete(evt) {
+	//This function is always called, irrespective of the content. You can use the variable "stage" after it is created in token create_stage.
+	var queue = evt.target;
+	var ssMetadata = lib.ssMetadata;
+	for(i=0; i<ssMetadata.length; i++) {
+		ss[ssMetadata[i].name] = new createjs.SpriteSheet( {"images": [queue.getResult(ssMetadata[i].name)], "frames": ssMetadata[i].frames} )
+	}
+	var preloaderDiv = document.getElementById("_preload_div_");
+	preloaderDiv.style.display = 'none';
+	dom_overlay_container.style.display = canvas.style.display = 'block';
+	exportRoot = new lib.project();
+	stage = new createjs.Stage(canvas);
+	stage.addChild(exportRoot);
+	stage.enableMouseOver();	
+	//Registers the "tick" event listener.
+	fnStartAnimation = function() {
+		createjs.Ticker.setFPS(lib.properties.fps);
+		createjs.Ticker.addEventListener("tick", stage);
+	}	    
+	//Code to support hidpi screens and responsive scaling.
+	function makeResponsive(isResp, respDim, isScale, scaleType) {		
+		var lastW, lastH, lastS=1;		
+		window.addEventListener('resize', resizeCanvas);		
+		resizeCanvas();		
+		function resizeCanvas() {			
+			var w = lib.properties.width, h = lib.properties.height;			
+			var iw = window.innerWidth, ih=window.innerHeight;			
+			var pRatio = window.devicePixelRatio || 1, xRatio=iw/w, yRatio=ih/h, sRatio=1;			
+			if(isResp) {                
+				if((respDim=='width'&&lastW==iw) || (respDim=='height'&&lastH==ih)) {                    
+					sRatio = lastS;                
+				}				
+				else if(!isScale) {					
+					if(iw<w || ih<h)						
+						sRatio = Math.min(xRatio, yRatio);				
+				}				
+				else if(scaleType==1) {					
+					sRatio = Math.min(xRatio, yRatio);				
+				}				
+				else if(scaleType==2) {					
+					sRatio = Math.max(xRatio, yRatio);				
+				}			
+			}			
+			canvas.width = w*pRatio*sRatio;			
+			canvas.height = h*pRatio*sRatio;
+			canvas.style.width = anim_container.style.width = dom_overlay_container.style.width = preloaderDiv.style.width = w*sRatio+'px';				
+			canvas.style.height = anim_container.style.height = dom_overlay_container.style.height = preloaderDiv.style.height = h*sRatio+'px';
+			stage.scaleX = pRatio*sRatio;			
+			stage.scaleY = pRatio*sRatio;			
+			lastW = iw; lastH = ih; lastS = sRatio;		
+		}
+	}
+	makeResponsive(false,'both',false,1);	
+	fnStartAnimation();
+}
+</script>
+</head>
+<body onload="init();">
+	<!-- mobile & medium screen -->
+	<div class="homeBack">
+		<h1 class="slogan">#up2u</h1>
+	</div>
+	<div class="videoContainer">
+		<!-- mobile only -->
+		<h2 class="title">
+			Vote
+		</h2>
+		<!-- medium screen only -->
+		<h2 class="titleM">
+			Vote for yourself
+		</h2>
+		<!-- mobile only -->
+		<h3 class="p1">
+			Lorem Ipsum is simply dummy text of the printing and typesetting industry. <br><br> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took agalley of type and scrambled it to make a type specimen book.
+		</h3>
+		<!-- medium screen only -->
+		<h3 class="p1M">
+			Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. <br><br> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took agalley of type and scrambled it to make a type specimen book. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took agalley of type and scrambled it to make a type specimen book.
+		</h3>
+		<video controls class="videoA">
+			<source src="video/up2u_mobile_MP4_1080pFINAL.mp4" type="video/mp4">
+		</video>
+		<div class="s" id="animation_container" style="background-color:rgba(255, 255, 255, 1.00); width:1280px; height:783px">
+		<canvas id="canvas" width="1280" height="783" style="position: absolute; display: none; background-color:rgba(255, 255, 255, 1.00);"></canvas>
+		<div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:1280px; height:783px; position: absolute; left: 0px; top: 0px; display: none;">
+		</div>
+	</div>
+    <div id="_preload_div_" style="display: inline-block; height:783px; width: 1280px; vertical-align=middle;position:absolute;left:0px;top:0px;text-align: center;">	<span style="display: inline-block; height: 100%; vertical-align: middle;"></span>	<img src="images/_preloader.gif?1496176568239" style="vertical-align: middle; max-height: 100%"/></div>
+	</div>
+	<!-- mobile only -->
+	<div class="newsContainer">
+		<h2 class="title2">Knowledge is power</h2>
+		<h3 class="p2">&#40; we deliver it to you &#41;</h3>
+		<div class="shareIcon"></div>
+<!-- FORM 1.0 -->
+		<form action="php/post.php" method="POST">
+			<input type="text" required name="name" autocomplete="on" placeholder="Insert your name" onFocus="this.placeholder = ''" onBlur="this.placeholder = 'Insert your name'">
+			<br>
+			<input type="email" required name="email" placeholder="Insert your e-mail" onFocus="this.placeholder = ''" onBlur="this.placeholder = 'Insert your e-mail'">
+			<br>
+			<label><input type="checkbox" checked name="sub" value="1"> &nbsp;subscribe to our newsletter</label>
+			<br>
+			<input type="submit" name="send" value="Send">
+		</form>
+	</div>
+	<!-- medium screen only -->
+	<ul class="newsflexContainer">
+ 		<li class="flexItem1">
+			<h2 class="title2">Knowledge is power</h2>
+			<h3 class="p2">&#40; we deliver it to you &#41;</h3>
+			<div class="shareIcon"></div>
+ 		</li>
+		<li class="flexItem2">
+<!-- FORM 1.1 -->
+			<form action="php/post.php" method="POST">
+				<input type="text" required name="name" autocomplete="on" placeholder="Insert your name" onFocus="this.placeholder = ''" onBlur="this.placeholder = 'Insert your name'">
+				<br>
+				<input type="email" required name="email" placeholder="Insert your e-mail" onFocus="this.placeholder = ''" onBlur="this.placeholder = 'Insert your e-mail'">
+				<br>
+				<label><input type="checkbox" checked name="sub" value="1"> &nbsp;subscribe to our newsletter</label>
+				<br>
+				<input type="submit" name="send" value="Send">
+			</form>
+		</li>
+	</ul>
+	<ul class="flexContainer">
+ 		<li class="flexItem3">
+			<h2 class="title2">Skip the line</h2>
+			<h2 class="title4">vote online</h2>
+			<h3 class="p1">
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eget est est. Etiam id neque id lectus rhoncus facilisis.<br><br> Pellentesque nisi erat, ultrices ac tellus vitae, eleifend posuere nunc. Vestibulum vitae venenatis turpis. In in fermentum turpis, in accumsan velit. Cras turpis sem, aliquet sed est quis, mollis placerat.
+			</h3>
+ 		</li>
+		<li class="flexItem4">
+			<h3 class="p1">
+				Sign petition
+			</h3>
+<!-- FORM 2.0 -->
+			<form action="php/post2.php" method="POST">
+				<input type="text" required name="fname" autocomplete="on" placeholder="First name" onFocus="this.placeholder = ''" onBlur="this.placeholder = 'First name'">
+				<input type="text" required name="lname" autocomplete="on" placeholder="Last name" onFocus="this.placeholder = ''" onBlur="this.placeholder = 'Last name'">
+				<br>
+				<input type="text" required name="address" placeholder="Address" onFocus="this.placeholder = ''" onBlur="this.placeholder = 'Address'">
+				<br>
+				<input type="email" required name="email" placeholder="E-mail" onFocus="this.placeholder = ''" onBlur="this.placeholder = 'E-mail'">
+				<br>
+				<input type="submit" name="send" value="Send signature">
+			</form>
+		</li>
+	</ul>
+	<!-- mobile only -->
+	<div class="container2">
+		<h2 class="title3">Skip the line</h2>
+		<h2 class="title4">vote online</h2>
+	</div>
+	<div class="petitionContainer">
+		<h3 class="p1">
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eget est est. Etiam id neque id lectus rhoncus facilisis.<br><br> Pellentesque nisi erat, ultrices ac tellus vitae, eleifend posuere nunc. Vestibulum vitae venenatis turpis. In in fermentum turpis, in accumsan velit. Cras turpis sem, aliquet sed est quis, mollis placerat.
+		</h3>
+<!-- FORM 2.1 -->
+		<form action="php/post2.php" method="POST">
+			<input type="text" required name="fname" autocomplete="on" placeholder="First name" onFocus="this.placeholder = ''" onBlur="this.placeholder = 'First name'">
+			<input type="text" required name="lname" autocomplete="on" placeholder="Last name" onFocus="this.placeholder = ''" onBlur="this.placeholder = 'Last name'">
+			<br>
+			<input type="text" required name="address" placeholder="Address" onFocus="this.placeholder = ''" onBlur="this.placeholder = 'Address'">
+			<br>
+			<input type="email" required name="email" placeholder="E-mail" onFocus="this.placeholder = ''" onBlur="this.placeholder = 'E-mail'">
+			<br>
+			<input type="submit" name="send" value="Send signature">
+		</form>
+	</div>
+	<!-- medium screen only -->
+	<ul class="flexContainer">
+ 		<li class="flexItem5">
+			<h2 class="title2">Do you want to know more about the candidates from your region?</h2>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br><br> Danish municipal elections 2017, yes no, this is ullamco laboris nisi ut aliquip ex ea commodo consequat. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+			</p>
+			<a href="map_sub.html">
+					Learn more
+			</a>
+ 		</li>
+	</ul>
+	<!-- mobile only -->
+	<div class="container3">
+		<h2 class="title3">Choose your region</h2>
+	</div>
+	<div class="dropdown">
+	  <button onclick="myFunc()" class="dropbtn"><h3 class="p3">Capital Denmark</h3></button>
+	  <div id="myDropdown" class="dropdown-content">
+	  	<a href="mun_cph.html"><h3>København</h3></a>
+		<a href="#"><h3>Lyngby</h3></a>
+		<a href="#"><h3>Ballerup</h3></a>
+	  </div>
+	</div>
+	<div class="dropdown2">
+	  <button onclick="myFunc2()" class="dropbtn2"><h3 class="p3">North Denmark</h3></button>
+	  <div id="myDropdown2" class="dropdown-content">
+		<a href="#"><h3>Dummy A</h3></a>
+		<a href="#"><h3>Dummy B</h3></a>
+		<a href="#"><h3>Dummy C</h3></a>
+	  </div>
+	</div>
+	<div class="dropdown3">
+	  <button onclick="myFunc3()" class="dropbtn3"><h3 class="p3">Central Denmark</h3></button>
+	  <div id="myDropdown3" class="dropdown-content">
+		<a href="#"><h3>Dummy D</h3></a>
+		<a href="#"><h3>Dummy E</h3></a>
+		<a href="#"><h3>Dummy F</h3></a>
+	  </div>
+	</div>
+	<div class="dropdown4">
+	  <button onclick="myFunc4()" class="dropbtn4"><h3 class="p3">Southern Denmark</h3></button>
+	  <div id="myDropdown4" class="dropdown-content">
+		<a href="#"><h3>Dummy G</h3></a>
+		<a href="#"><h3>Dummy H</h3></a>
+		<a href="#"><h3>Dummy I</h3></a>
+	  </div>
+	</div>
+	<div class="dropdown5">
+	  <button onclick="myFunc5()" class="dropbtn5"><h3 class="p3">Zealand Denmark</h3></button>
+	  <div id="myDropdown5" class="dropdown-content">
+		<a href="#"><h3>Dummy J</h3></a>
+		<a href="#"><h3>Dummy K</h3></a>
+		<a href="#"><h3>Dummy L</h3></a>
+	  </div>
+	</div>
+	<script>
+		function myFunc() {
+			document.getElementById("myDropdown").classList.toggle("show");
+		}
+		function myFunc2() {
+			document.getElementById("myDropdown2").classList.toggle("show");
+		}
+		function myFunc3() {
+			document.getElementById("myDropdown3").classList.toggle("show");
+		}
+		function myFunc4() {
+			document.getElementById("myDropdown4").classList.toggle("show");
+		}
+		function myFunc5() {
+			document.getElementById("myDropdown5").classList.toggle("show");
+		}
+	</script>
+	<!-- mobile & medium screen -->
+	<div class="container3">
+		<h2 class="title3">Share</h2>
+		<div class="social">
+			<img src="img/twitter.svg">
+			<img src="img/instagram.svg">
+			<img src="img/facebook.svg">
+			<img src="img/snapchat (1).svg">
+			<p>Brought to you by all TV2 stations &nbsp;&nbsp;- &nbsp;&nbsp;2017 <br> Contact &nbsp;&nbsp;- &nbsp;&nbsp;21 50 11 08</p>
+		</div>
+	</div>
+</body>
+</html>

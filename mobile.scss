@@ -1,0 +1,620 @@
+/* Scss Document --- mobile stylesheet*/
+
+@mixin form {
+	background-color: transparent;
+	border-bottom: 2px solid $darkGrey2;
+	border-top: 0px;
+	border-left: 0px;
+	border-right: 0px;
+	padding-bottom: 6px;
+	padding-left: 3%;
+	padding-right: 3%;
+	text-align: center;
+	font-size: 18px;
+	font-weight: 100;
+	color: $darkGrey2;
+}
+
+@mixin dropdown {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+    padding: 30px 0px;
+    border: none;
+	width: 100%;
+	height: 123px;
+	transform: $rotate;
+	&:hover {
+		outline: none;
+	}
+	&:focus {
+		outline: none;
+	}
+}
+
+@mixin cand {
+	background-color: transparent;
+	background-size: contain;
+	background-repeat: no-repeat;
+	position: relative;
+	margin-top: 27px;
+	border: none;
+	width: 100%;
+	height: 111px;
+	&:hover {
+		outline: none;
+	}
+	&:focus {
+		outline: none;
+	}
+}
+
+$font: 'Roboto', sans-serif;
+$grey: #DDDDDD;
+$blue: #35D0DC;
+$darkGrey: #424242;
+$darkGrey2: #525252;
+$darkGrey3: #626262;
+$rotate: skewY(12deg);
+$noRotate: skewY(-12deg);
+$sides: 0% 15%;
+$white: opacity(51%);
+$noWhite: opacity(151%);
+
+* {
+	padding: 0px;
+	margin: 0px;
+}
+
+body {
+	background-color: $darkGrey;
+}
+
+.homeBack {
+	background-image: url(../img/mobileBack.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 700px;
+	width: 100%;
+	.slogan {
+		text-align: center;
+		font-family: $font;
+		color: $grey;
+		font-weight: 100;
+		font-size: 80px;
+		text-shadow: -1px 2px 3px #000000;
+		padding-top: 190px;
+	}
+	.slogan2 {
+		text-align: center;
+		font-family: $font;
+		color: $blue;
+		font-weight: 100;
+		font-size: 69px;
+		text-shadow: -1px 2px 3px #000000;
+	}
+}
+
+.videoContainer {
+	background-color: $darkGrey;
+	height: 100%;
+	width: 100%;
+	margin-top: -99px;
+	transform: $rotate;
+	.title {
+		padding-top: 100px;
+		transform: $noRotate;
+		text-align: center;
+		font-family: $font;
+		color: $grey;
+		font-weight: 300;
+		font-size: 33px;
+	}
+	.titleM {
+		display: none;
+	}
+	.videoA {
+		transform: $noRotate;
+		margin: $sides;
+		max-width: 70%;
+		max-height: auto !important;
+		padding-bottom: 111px;
+	}
+	.p1 {
+		transform: $noRotate;
+		padding: 39px 15%;
+		text-align: justify;
+		color: $grey;
+		font-family: $font;
+		font-weight: 100;
+		font-size: 18px;
+	}
+	.p1M {
+		display: none;
+	}
+}
+
+.menuContainer {
+	background-color: $darkGrey;
+	width: 100%;
+	margin-top: -99px;
+	transform: $rotate;
+	.titleAlt {
+		padding-top: 50px;
+		font-family: $font;
+		text-align: left;
+		color: $grey;
+		font-weight: 300;
+		font-size: 33px;
+		width: 60%;
+	}
+	.titleMenu {
+		text-align: center;
+		padding: $sides;
+		transform: $noRotate;
+	}
+	.p1 {
+		transform: $noRotate;
+		padding: 39px 15%;
+		text-align: justify;
+		color: $grey;
+		font-family: $font;
+		font-weight: 100;
+		font-size: 18px;
+	}
+}
+
+
+.p1 {
+	transform: $noRotate;
+	padding: 69px 15%;
+	text-align: justify;
+	color: $grey;
+	font-family: $font;
+	font-weight: 100;
+	font-size: 18px;
+}
+
+.p2 {
+	transform: $noRotate;
+	padding-top: 3px;
+	text-align: center;
+	color: $darkGrey;
+	font-family: $font;
+	font-weight: 100;
+	font-size: 15px;
+}
+
+.newsContainer {
+	background-image: url(../img/newsBack2.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	width: 100%;
+	height: 777px;
+	transform: $rotate;
+	form {
+		transform: $noRotate;
+		margin: $sides;
+		margin-top: 69px;
+		font-family: $font;
+		text-align: center;
+		label {
+			font-size: 12px;
+			color: $darkGrey3;
+		}
+		input {
+			margin-top: 33px;
+			&[name=name] {
+				@include form;
+				&::placeholder {
+					color: $darkGrey3;
+				}
+				&:focus {
+					outline: none;
+				}
+			}
+			&[name=email] {
+				@include form;
+				&::placeholder {
+					color: $darkGrey3;
+				}
+				&:focus {
+					outline: none;
+				}
+			}
+			&[name=sub] {
+				margin-top: 33px;
+				text-align: left;
+			}
+			&[name=send] {
+				margin-top: 24px;
+				font-weight: 100;
+				font-size: 18px;
+				text-align: left;
+				background-color: #111111;
+				padding: 3px 12px;
+				border: 3px solid #111111;
+				border-radius: 6px;
+				filter: opacity(63%);
+				color: $blue;
+				&:focus {
+					outline: none;
+				}
+			}
+		}
+	}
+}
+
+.title2 {
+	padding-top: 153px;
+	transform: $noRotate;
+	text-align: center;
+	font-family: $font;
+	color: $darkGrey2;
+	font-weight: 300;
+	font-size: 33px;
+}
+
+.shareIcon {
+	transform: $noRotate;
+	background-image: url(../img/shareIcon.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+	height: 39px;
+	width: 100%;
+	margin-top: 15px;
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 60px #111111 inset;
+	box-shadow: 0 0 0px 60px #111111 inset;
+	-webkit-text-fill-color: $grey !important;
+	filter: opacity(60%);
+	border-radius: 9px;
+	padding-top: 6px;
+	border: none;
+}
+
+.container2 {
+	transform: $rotate;
+	.title3 {
+		padding-top: 80px;
+		transform: $noRotate;
+		text-align: center;
+		padding-right: 18%;
+		font-family: $font;
+		color: $grey;
+		font-weight: 300;
+		font-size: 33px;
+	}
+	.title4 {
+		transform: $noRotate;
+		text-align: center;
+		padding-left: 18%;
+		font-family: $font;
+		color: $blue;
+		font-weight: 300;
+		font-size: 33px;
+		padding-bottom: 81px;
+	}
+}
+
+.container3 {
+	transform: $rotate;
+	.title3 {
+		padding-top: 99px;
+		padding-bottom: 99px;
+		transform: $noRotate;
+		text-align: center;
+		font-family: $font;
+		color: $grey;
+		font-weight: 300;
+		font-size: 33px;
+	}
+}
+
+.petitionContainer {
+	background-image: url(../img/petitionBack.jpg);
+	height: 777px;
+	width: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	transform: $noRotate;
+	.p1 {
+		transform: $rotate;
+		padding-top: 111px;
+		color: $grey;
+		font-weight: 300;
+	}
+	form {
+		transform: $rotate;
+		margin: $sides;
+		margin-top: -30px;
+		font-family: $font;
+		text-align: center;
+		input {
+			margin-top: 30px;
+			&[name=fname] {
+				@include form;
+				&::placeholder {
+					color: $grey;
+				}
+				&:focus {
+					outline: none;
+				}
+			}
+			&[name=lname] {
+				@include form;
+				&::placeholder {
+					color: $grey;
+				}
+				&:focus {
+					outline: none;
+				}
+			}
+			&[name=address] {
+				@include form;
+				&::placeholder {
+					color: $grey;
+				}
+				&:focus {
+					outline: none;
+				}
+			}
+			&[name=email] {
+				@include form;
+				&::placeholder {
+					color: $grey;
+				}
+				&:focus {
+					outline: none;
+				}
+			}
+			&[name=send] {
+				margin-top: 36px;
+				font-weight: 100;
+				font-size: 18px;
+				text-align: left;
+				background-color: #111111;
+				padding: 3px 12px;
+				border: 3px solid #111111;
+				border-radius: 6px;
+				filter: opacity(63%);
+				color: #EEEEEE;
+				&:focus {
+					outline: none;
+				}
+			}
+		}
+	}
+}
+
+.dropbtn {
+    background-image: url(../img/capitalDenmark.jpg);
+	@include dropdown;
+}
+
+.dropbtn2 {
+    background-image: url(../img/northDenmark.jpg);
+	@include dropdown;
+}
+
+.dropbtn3 {
+	background-image: url(../img/centralDenmark.jpg);
+	@include dropdown;
+}
+
+.dropbtn4 {
+	background-image: url(../img/southernDenmark.jpg);
+	@include dropdown;
+}
+
+.dropbtn5 {
+	background-image: url(../img/zealandDenmark.jpg);
+	@include dropdown;
+}
+
+.dropdown {
+	width: 100%;
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown2 {
+	width: 100%;
+    position: relative;
+    display: inline-block;
+	margin-top: -1px;
+}
+
+.dropdown3 {
+	width: 100%;
+    position: relative;
+    display: inline-block;
+	margin-top: -1px;
+}
+
+.dropdown4 {
+	width: 100%;
+    position: relative;
+    display: inline-block;
+	margin-top: -1px;
+}
+
+.dropdown5 {
+	width: 100%;
+    position: relative;
+    display: inline-block;
+	margin-top: -1px;
+}
+
+.dropdown-content {
+	transform: $rotate;
+    display: none;
+    position: relative;
+    background-color: $darkGrey;
+    width: 100%;
+    z-index: 1;
+	font-family: $font;
+	font-weight: 100;
+	a {
+		color: $blue;
+		padding: 12px 16px;
+		text-decoration: none;
+		display: block;
+		text-align: center;
+		&:hover {
+			background-color: $blue;
+			color: $darkGrey;
+		}
+		h3 {
+			transform: $noRotate;
+			font-weight: 100;
+			padding: 3px;
+		}
+	}
+}
+
+.dropMenu {
+    background-image: url(../img/menu.svg);
+	background-color: transparent;
+	background-size: contain;
+	background-repeat: no-repeat;
+	position: relative;
+    padding: 0px;
+    border: none;
+	width: 10%;
+	height: 30px;
+	&:hover {
+		outline: none;
+	}
+	&:focus {
+		outline: none;
+	}
+}
+
+.dropdownBurguer {
+	width: 100%;
+    position: relative;
+    display: inline-block;
+	text-align: left;
+	p {
+		font-family: $font;
+		color: $grey;
+		margin-top: 30px;
+		margin-bottom: 9px;
+		text-align: justify;
+	}
+}
+
+.dropdown-menu {
+    display: none;
+    position: relative;
+    background-color: $darkGrey;
+    width: 100%;
+    z-index: 1;
+	font-family: $font;
+	font-weight: 100;
+	a {
+		color: $blue;
+		padding: 12px 16px;
+		text-decoration: none;
+		display: block;
+		text-align: center;
+		&:hover {
+			background-color: $blue;
+			color: $darkGrey;
+		}
+		h3 {
+			font-weight: 100;
+			padding: 3px;
+		}
+	}
+}
+
+.show {
+	display:block;
+}
+
+.p3 {
+	transform: $noRotate;
+	text-align: center;
+	color: $darkGrey;
+	font-family: $font;
+	font-weight: 100;
+	font-size: 21px;
+}
+
+.social {
+	transform: $noRotate;
+	margin-top: -69px;
+	text-align: center;
+	img {
+		width: 15%;
+		padding: 2%;
+	}
+	p {
+		font-family: $font;
+		font-size: 13px;
+		color: #999999;
+		font-weight: 100;
+		margin-top: 39px;
+		
+	}
+}
+
+.candContainer {
+	padding: $sides;
+	.dropCand1 {
+		background-image: url(../img/cand1.png);
+		@include cand;
+		margin-top: 0px !important;
+	}
+	.dropCand2 {
+		background-image: url(../img/cand2.png);
+		@include cand;
+	}
+	.dropCand3 {
+		background-image: url(../img/cand3.png);
+		@include cand;
+	}
+	.dropCand4 {
+		background-image: url(../img/cand4.png);
+		@include cand;
+	}
+	.dropCand5 {
+		background-image: url(../img/cand5.png);
+		@include cand;
+	}
+	.dropCand6 {
+		background-image: url(../img/cand6.png);
+		@include cand;
+	}
+	.dropCand7 {
+		background-image: url(../img/cand7.png);
+		@include cand;
+	}
+	.dropCand8 {
+		background-image: url(../img/cand8.png);
+		@include cand;
+	}
+}
+
+.flexContainer {
+	display: none;
+}
+
+.flexContainer2 {
+	display: none;
+}
+
+.newsflexContainer {
+	display: none;
+}
+
+.s {
+	display: none;
+}

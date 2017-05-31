@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="authoring-tool" content="Adobe_Animate_CC">
+<title>Choose your region</title>
+<link rel="stylesheet" type="text/css" href="css/small.css" media="screen and (min-width: 701px)">
+<link rel="stylesheet" type="text/css" href="css/medium.css" media="screen and (min-width: 901px)">
+<script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+<script src="map.js?1496056321530"></script>
+<script>
+var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
+function init() {
+	canvas = document.getElementById("canvas");
+	anim_container = document.getElementById("animation_container");
+	dom_overlay_container = document.getElementById("dom_overlay_container");
+	handleComplete();
+}
+function handleComplete() {
+	//This function is always called, irrespective of the content. You can use the variable "stage" after it is created in token create_stage.
+	exportRoot = new lib.map();
+	stage = new createjs.Stage(canvas);
+	stage.addChild(exportRoot);
+	stage.enableMouseOver();	
+	//Registers the "tick" event listener.
+	fnStartAnimation = function() {
+		createjs.Ticker.setFPS(lib.properties.fps);
+		createjs.Ticker.addEventListener("tick", stage);
+	}	    
+	//Code to support hidpi screens and responsive scaling.
+	function makeResponsive(isResp, respDim, isScale, scaleType) {		
+		var lastW, lastH, lastS=1;		
+		window.addEventListener('resize', resizeCanvas);		
+		resizeCanvas();		
+		function resizeCanvas() {			
+			var w = lib.properties.width, h = lib.properties.height;			
+			var iw = window.innerWidth, ih=window.innerHeight;			
+			var pRatio = window.devicePixelRatio || 0.5, xRatio=iw/w, yRatio=ih/h, sRatio=0.5;			
+			if(isResp) {                
+				if((respDim=='width'&&lastW==iw) || (respDim=='height'&&lastH==ih)) {                    
+					sRatio = lastS;                
+				}				
+				else if(!isScale) {					
+					if(iw<w || ih<h)						
+						sRatio = Math.min(xRatio, yRatio);				
+				}				
+				else if(scaleType==0.5) {					
+					sRatio = Math.min(xRatio, yRatio);				
+				}				
+				else if(scaleType==1) {					
+					sRatio = Math.max(xRatio, yRatio);				
+				}			
+			}			
+			canvas.width = w*pRatio*sRatio;			
+			canvas.height = h*pRatio*sRatio;
+			canvas.style.width = dom_overlay_container.style.width = anim_container.style.width =  w*sRatio+'px';				
+			canvas.style.height = anim_container.style.height = dom_overlay_container.style.height = h*sRatio+'px';
+			stage.scaleX = pRatio*sRatio;			
+			stage.scaleY = pRatio*sRatio;			
+			lastW = iw; lastH = ih; lastS = sRatio;		
+		}
+	}
+	makeResponsive(false,'both',false,1);	
+	fnStartAnimation();
+}
+</script>
+</head>
+
+<body onload="init();">
+	<div class="animation_flex">
+	<h1>Choose your region</h1>
+		<div id="animation_container" style="background-color:rgba(255, 255, 255, 1.00); width:1000px; height:1200px">
+			<canvas id="canvas" width="1000" height="1200" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 1.00);"></canvas>
+			<div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:1000px; height:1200px; position: absolute; left: 0px; top: 0px; display: block;">
+			</div>
+		</div>
+	</div>
+	<div class="container4">
+		<h2 class="title3">Share</h2>
+		<div class="social">
+			<img src="img/twitter.svg">
+			<img src="img/instagram.svg">
+			<img src="img/facebook.svg">
+			<img src="img/snapchat (1).svg">
+			<p>Brought to you by all TV2 stations &nbsp;&nbsp;- &nbsp;&nbsp;2017 <br> Contact &nbsp;&nbsp;- &nbsp;&nbsp;21 50 11 08</p>
+		</div>
+	</div>
+</body>
+</html>

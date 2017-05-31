@@ -1,0 +1,668 @@
+/* Scss Document --- mobile stylesheet*/
+* {
+  padding: 0px;
+  margin: 0px; }
+
+body {
+  background-color: #424242; }
+
+.homeBack {
+  background-image: url(../img/mobileBack.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 700px;
+  width: 100%; }
+  .homeBack .slogan {
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    color: #DDDDDD;
+    font-weight: 100;
+    font-size: 80px;
+    text-shadow: -1px 2px 3px #000000;
+    padding-top: 190px; }
+  .homeBack .slogan2 {
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    color: #35D0DC;
+    font-weight: 100;
+    font-size: 69px;
+    text-shadow: -1px 2px 3px #000000; }
+
+.videoContainer {
+  background-color: #424242;
+  height: 100%;
+  width: 100%;
+  margin-top: -99px;
+  transform: skewY(12deg); }
+  .videoContainer .title {
+    padding-top: 100px;
+    transform: skewY(-12deg);
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    color: #DDDDDD;
+    font-weight: 300;
+    font-size: 33px; }
+  .videoContainer .titleM {
+    display: none; }
+  .videoContainer .videoA {
+    transform: skewY(-12deg);
+    margin: 0% 15%;
+    max-width: 70%;
+    max-height: auto !important;
+    padding-bottom: 111px; }
+  .videoContainer .p1 {
+    transform: skewY(-12deg);
+    padding: 39px 15%;
+    text-align: justify;
+    color: #DDDDDD;
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-size: 18px; }
+  .videoContainer .p1M {
+    display: none; }
+
+.menuContainer {
+  background-color: #424242;
+  width: 100%;
+  margin-top: -99px;
+  transform: skewY(12deg); }
+  .menuContainer .titleAlt {
+    padding-top: 50px;
+    font-family: "Roboto", sans-serif;
+    text-align: left;
+    color: #DDDDDD;
+    font-weight: 300;
+    font-size: 33px;
+    width: 60%; }
+  .menuContainer .titleMenu {
+    text-align: center;
+    padding: 0% 15%;
+    transform: skewY(-12deg); }
+  .menuContainer .p1 {
+    transform: skewY(-12deg);
+    padding: 39px 15%;
+    text-align: justify;
+    color: #DDDDDD;
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-size: 18px; }
+
+.p1 {
+  transform: skewY(-12deg);
+  padding: 69px 15%;
+  text-align: justify;
+  color: #DDDDDD;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-size: 18px; }
+
+.p2 {
+  transform: skewY(-12deg);
+  padding-top: 3px;
+  text-align: center;
+  color: #424242;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-size: 15px; }
+
+.newsContainer {
+  background-image: url(../img/newsBack2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 777px;
+  transform: skewY(12deg); }
+  .newsContainer form {
+    transform: skewY(-12deg);
+    margin: 0% 15%;
+    margin-top: 69px;
+    font-family: "Roboto", sans-serif;
+    text-align: center; }
+    .newsContainer form label {
+      font-size: 12px;
+      color: #626262; }
+    .newsContainer form input {
+      margin-top: 33px; }
+      .newsContainer form input[name=name] {
+        background-color: transparent;
+        border-bottom: 2px solid #525252;
+        border-top: 0px;
+        border-left: 0px;
+        border-right: 0px;
+        padding-bottom: 6px;
+        padding-left: 3%;
+        padding-right: 3%;
+        text-align: center;
+        font-size: 18px;
+        font-weight: 100;
+        color: #525252; }
+        .newsContainer form input[name=name]::placeholder {
+          color: #626262; }
+        .newsContainer form input[name=name]:focus {
+          outline: none; }
+      .newsContainer form input[name=email] {
+        background-color: transparent;
+        border-bottom: 2px solid #525252;
+        border-top: 0px;
+        border-left: 0px;
+        border-right: 0px;
+        padding-bottom: 6px;
+        padding-left: 3%;
+        padding-right: 3%;
+        text-align: center;
+        font-size: 18px;
+        font-weight: 100;
+        color: #525252; }
+        .newsContainer form input[name=email]::placeholder {
+          color: #626262; }
+        .newsContainer form input[name=email]:focus {
+          outline: none; }
+      .newsContainer form input[name=sub] {
+        margin-top: 33px;
+        text-align: left; }
+      .newsContainer form input[name=send] {
+        margin-top: 24px;
+        font-weight: 100;
+        font-size: 18px;
+        text-align: left;
+        background-color: #111111;
+        padding: 3px 12px;
+        border: 3px solid #111111;
+        border-radius: 6px;
+        filter: opacity(63%);
+        color: #35D0DC; }
+        .newsContainer form input[name=send]:focus {
+          outline: none; }
+
+.title2 {
+  padding-top: 153px;
+  transform: skewY(-12deg);
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  color: #525252;
+  font-weight: 300;
+  font-size: 33px; }
+
+.shareIcon {
+  transform: skewY(-12deg);
+  background-image: url(../img/shareIcon.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  height: 39px;
+  width: 100%;
+  margin-top: 15px; }
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 60px #111111 inset;
+  box-shadow: 0 0 0px 60px #111111 inset;
+  -webkit-text-fill-color: #DDDDDD !important;
+  filter: opacity(60%);
+  border-radius: 9px;
+  padding-top: 6px;
+  border: none; }
+
+.container2 {
+  transform: skewY(12deg); }
+  .container2 .title3 {
+    padding-top: 80px;
+    transform: skewY(-12deg);
+    text-align: center;
+    padding-right: 18%;
+    font-family: "Roboto", sans-serif;
+    color: #DDDDDD;
+    font-weight: 300;
+    font-size: 33px; }
+  .container2 .title4 {
+    transform: skewY(-12deg);
+    text-align: center;
+    padding-left: 18%;
+    font-family: "Roboto", sans-serif;
+    color: #35D0DC;
+    font-weight: 300;
+    font-size: 33px;
+    padding-bottom: 81px; }
+
+.container3 {
+  transform: skewY(12deg); }
+  .container3 .title3 {
+    padding-top: 99px;
+    padding-bottom: 99px;
+    transform: skewY(-12deg);
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    color: #DDDDDD;
+    font-weight: 300;
+    font-size: 33px; }
+
+.petitionContainer {
+  background-image: url(../img/petitionBack.jpg);
+  height: 777px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: skewY(-12deg); }
+  .petitionContainer .p1 {
+    transform: skewY(12deg);
+    padding-top: 111px;
+    color: #DDDDDD;
+    font-weight: 300; }
+  .petitionContainer form {
+    transform: skewY(12deg);
+    margin: 0% 15%;
+    margin-top: -30px;
+    font-family: "Roboto", sans-serif;
+    text-align: center; }
+    .petitionContainer form input {
+      margin-top: 30px; }
+      .petitionContainer form input[name=fname] {
+        background-color: transparent;
+        border-bottom: 2px solid #525252;
+        border-top: 0px;
+        border-left: 0px;
+        border-right: 0px;
+        padding-bottom: 6px;
+        padding-left: 3%;
+        padding-right: 3%;
+        text-align: center;
+        font-size: 18px;
+        font-weight: 100;
+        color: #525252; }
+        .petitionContainer form input[name=fname]::placeholder {
+          color: #DDDDDD; }
+        .petitionContainer form input[name=fname]:focus {
+          outline: none; }
+      .petitionContainer form input[name=lname] {
+        background-color: transparent;
+        border-bottom: 2px solid #525252;
+        border-top: 0px;
+        border-left: 0px;
+        border-right: 0px;
+        padding-bottom: 6px;
+        padding-left: 3%;
+        padding-right: 3%;
+        text-align: center;
+        font-size: 18px;
+        font-weight: 100;
+        color: #525252; }
+        .petitionContainer form input[name=lname]::placeholder {
+          color: #DDDDDD; }
+        .petitionContainer form input[name=lname]:focus {
+          outline: none; }
+      .petitionContainer form input[name=address] {
+        background-color: transparent;
+        border-bottom: 2px solid #525252;
+        border-top: 0px;
+        border-left: 0px;
+        border-right: 0px;
+        padding-bottom: 6px;
+        padding-left: 3%;
+        padding-right: 3%;
+        text-align: center;
+        font-size: 18px;
+        font-weight: 100;
+        color: #525252; }
+        .petitionContainer form input[name=address]::placeholder {
+          color: #DDDDDD; }
+        .petitionContainer form input[name=address]:focus {
+          outline: none; }
+      .petitionContainer form input[name=email] {
+        background-color: transparent;
+        border-bottom: 2px solid #525252;
+        border-top: 0px;
+        border-left: 0px;
+        border-right: 0px;
+        padding-bottom: 6px;
+        padding-left: 3%;
+        padding-right: 3%;
+        text-align: center;
+        font-size: 18px;
+        font-weight: 100;
+        color: #525252; }
+        .petitionContainer form input[name=email]::placeholder {
+          color: #DDDDDD; }
+        .petitionContainer form input[name=email]:focus {
+          outline: none; }
+      .petitionContainer form input[name=send] {
+        margin-top: 36px;
+        font-weight: 100;
+        font-size: 18px;
+        text-align: left;
+        background-color: #111111;
+        padding: 3px 12px;
+        border: 3px solid #111111;
+        border-radius: 6px;
+        filter: opacity(63%);
+        color: #EEEEEE; }
+        .petitionContainer form input[name=send]:focus {
+          outline: none; }
+
+.dropbtn {
+  background-image: url(../img/capitalDenmark.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 30px 0px;
+  border: none;
+  width: 100%;
+  height: 123px;
+  transform: skewY(12deg); }
+  .dropbtn:hover {
+    outline: none; }
+  .dropbtn:focus {
+    outline: none; }
+
+.dropbtn2 {
+  background-image: url(../img/northDenmark.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 30px 0px;
+  border: none;
+  width: 100%;
+  height: 123px;
+  transform: skewY(12deg); }
+  .dropbtn2:hover {
+    outline: none; }
+  .dropbtn2:focus {
+    outline: none; }
+
+.dropbtn3 {
+  background-image: url(../img/centralDenmark.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 30px 0px;
+  border: none;
+  width: 100%;
+  height: 123px;
+  transform: skewY(12deg); }
+  .dropbtn3:hover {
+    outline: none; }
+  .dropbtn3:focus {
+    outline: none; }
+
+.dropbtn4 {
+  background-image: url(../img/southernDenmark.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 30px 0px;
+  border: none;
+  width: 100%;
+  height: 123px;
+  transform: skewY(12deg); }
+  .dropbtn4:hover {
+    outline: none; }
+  .dropbtn4:focus {
+    outline: none; }
+
+.dropbtn5 {
+  background-image: url(../img/zealandDenmark.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 30px 0px;
+  border: none;
+  width: 100%;
+  height: 123px;
+  transform: skewY(12deg); }
+  .dropbtn5:hover {
+    outline: none; }
+  .dropbtn5:focus {
+    outline: none; }
+
+.dropdown {
+  width: 100%;
+  position: relative;
+  display: inline-block; }
+
+.dropdown2 {
+  width: 100%;
+  position: relative;
+  display: inline-block;
+  margin-top: -1px; }
+
+.dropdown3 {
+  width: 100%;
+  position: relative;
+  display: inline-block;
+  margin-top: -1px; }
+
+.dropdown4 {
+  width: 100%;
+  position: relative;
+  display: inline-block;
+  margin-top: -1px; }
+
+.dropdown5 {
+  width: 100%;
+  position: relative;
+  display: inline-block;
+  margin-top: -1px; }
+
+.dropdown-content {
+  transform: skewY(12deg);
+  display: none;
+  position: relative;
+  background-color: #424242;
+  width: 100%;
+  z-index: 1;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100; }
+  .dropdown-content a {
+    color: #35D0DC;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center; }
+    .dropdown-content a:hover {
+      background-color: #35D0DC;
+      color: #424242; }
+    .dropdown-content a h3 {
+      transform: skewY(-12deg);
+      font-weight: 100;
+      padding: 3px; }
+
+.dropMenu {
+  background-image: url(../img/menu.svg);
+  background-color: transparent;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: relative;
+  padding: 0px;
+  border: none;
+  width: 10%;
+  height: 30px; }
+  .dropMenu:hover {
+    outline: none; }
+  .dropMenu:focus {
+    outline: none; }
+
+.dropdownBurguer {
+  width: 100%;
+  position: relative;
+  display: inline-block;
+  text-align: left; }
+  .dropdownBurguer p {
+    font-family: "Roboto", sans-serif;
+    color: #DDDDDD;
+    margin-top: 30px;
+    margin-bottom: 9px;
+    text-align: justify; }
+
+.dropdown-menu {
+  display: none;
+  position: relative;
+  background-color: #424242;
+  width: 100%;
+  z-index: 1;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100; }
+  .dropdown-menu a {
+    color: #35D0DC;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center; }
+    .dropdown-menu a:hover {
+      background-color: #35D0DC;
+      color: #424242; }
+    .dropdown-menu a h3 {
+      font-weight: 100;
+      padding: 3px; }
+
+.show {
+  display: block; }
+
+.p3 {
+  transform: skewY(-12deg);
+  text-align: center;
+  color: #424242;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-size: 21px; }
+
+.social {
+  transform: skewY(-12deg);
+  margin-top: -69px;
+  text-align: center; }
+  .social img {
+    width: 15%;
+    padding: 2%; }
+  .social p {
+    font-family: "Roboto", sans-serif;
+    font-size: 13px;
+    color: #999999;
+    font-weight: 100;
+    margin-top: 39px; }
+
+.candContainer {
+  padding: 0% 15%; }
+  .candContainer .dropCand1 {
+    background-image: url(../img/cand1.png);
+    background-color: transparent;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    margin-top: 27px;
+    border: none;
+    width: 100%;
+    height: 111px;
+    margin-top: 0px !important; }
+    .candContainer .dropCand1:hover {
+      outline: none; }
+    .candContainer .dropCand1:focus {
+      outline: none; }
+  .candContainer .dropCand2 {
+    background-image: url(../img/cand2.png);
+    background-color: transparent;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    margin-top: 27px;
+    border: none;
+    width: 100%;
+    height: 111px; }
+    .candContainer .dropCand2:hover {
+      outline: none; }
+    .candContainer .dropCand2:focus {
+      outline: none; }
+  .candContainer .dropCand3 {
+    background-image: url(../img/cand3.png);
+    background-color: transparent;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    margin-top: 27px;
+    border: none;
+    width: 100%;
+    height: 111px; }
+    .candContainer .dropCand3:hover {
+      outline: none; }
+    .candContainer .dropCand3:focus {
+      outline: none; }
+  .candContainer .dropCand4 {
+    background-image: url(../img/cand4.png);
+    background-color: transparent;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    margin-top: 27px;
+    border: none;
+    width: 100%;
+    height: 111px; }
+    .candContainer .dropCand4:hover {
+      outline: none; }
+    .candContainer .dropCand4:focus {
+      outline: none; }
+  .candContainer .dropCand5 {
+    background-image: url(../img/cand5.png);
+    background-color: transparent;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    margin-top: 27px;
+    border: none;
+    width: 100%;
+    height: 111px; }
+    .candContainer .dropCand5:hover {
+      outline: none; }
+    .candContainer .dropCand5:focus {
+      outline: none; }
+  .candContainer .dropCand6 {
+    background-image: url(../img/cand6.png);
+    background-color: transparent;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    margin-top: 27px;
+    border: none;
+    width: 100%;
+    height: 111px; }
+    .candContainer .dropCand6:hover {
+      outline: none; }
+    .candContainer .dropCand6:focus {
+      outline: none; }
+  .candContainer .dropCand7 {
+    background-image: url(../img/cand7.png);
+    background-color: transparent;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    margin-top: 27px;
+    border: none;
+    width: 100%;
+    height: 111px; }
+    .candContainer .dropCand7:hover {
+      outline: none; }
+    .candContainer .dropCand7:focus {
+      outline: none; }
+  .candContainer .dropCand8 {
+    background-image: url(../img/cand8.png);
+    background-color: transparent;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    margin-top: 27px;
+    border: none;
+    width: 100%;
+    height: 111px; }
+    .candContainer .dropCand8:hover {
+      outline: none; }
+    .candContainer .dropCand8:focus {
+      outline: none; }
+
+.flexContainer {
+  display: none; }
+
+.flexContainer2 {
+  display: none; }
+
+.newsflexContainer {
+  display: none; }
+
+.s {
+  display: none; }

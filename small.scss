@@ -1,0 +1,745 @@
+/* Scss Document --- medium screen stylesheet*/
+@mixin form {
+	background-color: transparent;
+/*	border-bottom: 2px solid $darkGrey2;*/
+	border-top: 0px;
+	border-left: 0px;
+	border-right: 0px;
+	padding-bottom: 6px;
+	padding-left: 3%;
+	padding-right: 3%;
+	font-size: 18px;
+	font-weight: 100;
+	color: $darkGrey2;
+}
+
+@mixin dropdown {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+    padding: 30px 0px;
+    border: none;
+	width: 100%;
+	height: 123px;
+	transform: $rotate;
+	&:hover {
+		outline: none;
+	}
+	&:focus {
+		outline: none;
+	}
+}
+
+@mixin cand {
+	background-color: transparent;
+	background-size: contain;
+	background-repeat: no-repeat;
+	position: relative;
+	border: none;
+	width: 380px;
+	height: 123px;
+	&:hover {
+		outline: none;
+	}
+	&:focus {
+		outline: none;
+	}
+}
+
+$font: 'Roboto', sans-serif;
+$grey: #DDDDDD;
+$blue: #35D0DC;
+$darkGrey: #424242;
+$darkGrey2: #525252;
+$darkGrey3: #626262;
+$rotate: skewY(9deg);
+$noRotate: skewY(-9deg);
+$sides: 0% 10%;
+$white: opacity(51%);
+$noWhite: opacity(151%);
+
+* {
+	padding: 0px;
+	margin: 0px;
+}
+
+body {
+	background-color: $darkGrey;
+}
+
+.homeBack {
+	background-image: url(../img/copenhagenStreet.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: left;
+	background-attachment: fixed;
+	height: 830px;
+	width: 100%;
+	.slogan {
+		text-align: center;
+		font-family: $font;
+		color: $grey;
+		font-weight: 100;
+		font-size: 111px;
+		text-shadow: -1px 2px 3px #000000;
+		padding-top: 266px;
+	}
+	.slogan2 {
+		text-align: center;
+		font-family: $font;
+		color: $blue;
+		font-weight: 100;
+		font-size: 111px;
+		text-shadow: -1px 2px 3px #000000;
+	}
+}
+
+.videoContainer {
+	background-color: $darkGrey;
+	height: 100%;
+	width: 100%;
+	margin-top: -99px;
+	padding-top: 1515px;
+	transform: $rotate;
+	.title {
+		display: none;
+	}
+	.titleM {
+		margin-top: -1414px;
+		padding-bottom: 39px;
+		transform: $noRotate;
+		text-align: center;
+		font-family: $font;
+		color: $grey;
+		font-weight: 300;
+		font-size: 33px;
+	}
+	.videoA {
+		display: none;
+	}
+	
+	.s {
+		transform: $noRotate;
+		margin: 5%;
+		width: 80%;
+		height: 80%;
+	}
+	.p1 {
+		display: none;
+	}
+	.p1M {
+		transform: $noRotate;
+		padding: 0px 10%;
+		text-align: justify;
+		color: $grey;
+		font-family: $font;
+		font-weight: 100;
+		font-size: 18px;
+	}
+}
+
+.newsContainer {
+	display: none;
+}
+
+.p2 {
+	transform: $noRotate;
+	padding-top: 3px;
+	text-align: center;
+	color: $darkGrey;
+	font-family: $font;
+	font-weight: 100;
+	font-size: 15px;
+}
+
+.title2 {
+	padding-top: 153px;
+	transform: $noRotate;
+	text-align: center;
+	font-family: $font;
+	color: $darkGrey2;
+	font-weight: 300;
+	font-size: 33px;
+}
+
+.shareIcon {
+	transform: $noRotate;
+	background-image: url(../img/shareIcon.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+	height: 39px;
+	width: 100%;
+	margin-top: 15px;
+}
+
+.flexContainer {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	width: 100%;
+	height: 100%;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	justify-content: space-around;
+	transform: skewY(9deg);
+}
+
+.newsflexContainer {
+	padding: 0;
+	margin: 0;
+	margin-top: -333px;
+	list-style: none;
+	width: 100%;
+	height: 100%;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	justify-content: space-around;
+	transform: skewY(9deg);
+}
+
+.flexItem1 {
+	background-image: url(../img/newsback2.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	width: 50%;
+	height: 777px;
+	text-align: center;
+	.title2 {
+		padding-top: 333px;
+	}
+	.p2 {
+		margin-top: 15px;
+	}
+}
+
+.flexItem2 {
+	background-color: $grey;
+	width: 50%;
+	height: 777px;
+	text-align: center;
+	form {
+		transform: $noRotate;
+		margin: $sides;
+		margin-top: 202px;
+		font-family: $font;
+		text-align: center;
+		label {
+			font-size: 12px;
+			color: $darkGrey3;
+		}
+		input {
+			margin-top: 33px;
+			&[name=name] {
+				@include form;
+				text-align: center;
+				border-bottom: 2px solid $darkGrey2;
+				&::placeholder {
+					color: $darkGrey3;
+				}
+				&:focus {
+					outline: none;
+				}
+			}
+			&[name=email] {
+				@include form;
+				text-align: center;
+				border-bottom: 2px solid $darkGrey2;
+				&::placeholder {
+					color: $darkGrey3;
+				}
+				&:focus {
+					outline: none;
+				}
+			}
+			&[name=sub] {
+				margin-top: 33px;
+			}
+			&[name=send] {
+				margin-top: 24px;
+				font-weight: 100;
+				font-size: 18px;
+				text-align: left;
+				padding: 3px 12px;
+				border: 3px solid $blue;
+				background-color: transparent;
+				color: $blue;
+				&:focus {
+					outline: none;
+				}
+			}
+		}
+	}
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 60px $grey inset;
+	box-shadow: 0 0 0px 60px $grey inset;
+	border: none;
+}
+
+.flexItem3 {
+	background-color: $grey;
+	width: 50%;
+	height: 777px;
+	text-align: center;
+	.title2 {
+		padding-top: 200px;
+		padding-right: 12%;
+	}
+	.title4 {
+		transform: $noRotate;
+		text-align: center;
+		padding-left: 12%;
+		font-family: $font;
+		color: $blue;
+		font-weight: 300;
+		font-size: 33px;
+		padding-bottom: 81px;
+	}
+	.p1 {
+		transform: $noRotate;
+		padding-top: 9px;
+		color: $darkGrey;
+		font-weight: 300;
+	}
+}
+
+.p1 {
+	transform: $noRotate;
+	padding: $sides;
+	text-align: justify;
+	color: $grey;
+	font-family: $font;
+	font-size: 18px;
+}
+
+.container2 {
+	display: none;
+}
+
+.petitionContainer {
+	display: none;
+}
+
+.flexItem4 {
+	background-image: url(../img/petitionBack.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	width: 50%;
+	height: 777px;
+	text-align: center;
+	.p1 {
+		padding: $sides;
+		color: $grey;
+		font-family: $font;
+		font-size: 18px;
+		font-weight: 300;
+		margin-top: 140px;
+	}
+	form {
+		transform: $noRotate;
+		margin: $sides;
+		margin-top: 39px;
+		font-family: $font;
+		text-align: left;
+		label {
+			font-size: 12px;
+			color: $darkGrey3;
+		}
+		input {
+			margin-top: 33px;
+			&[name=fname] {
+				@include form;
+				&::placeholder {
+					color: $grey;
+				}
+				&:focus {
+					outline: none;
+				}
+			}
+			&[name=lname] {
+				@include form;
+				&::placeholder {
+					color: $grey;
+				}
+				&:focus {
+					outline: none;
+				}
+			}
+			&[name=address] {
+				@include form;
+				padding-right: 18%;
+				&::placeholder {
+					color: $grey;	
+				}
+				&:focus {
+					outline: none;
+				}
+			}
+			&[name=email] {
+				@include form;
+				padding-right: 18%;
+				&::placeholder {
+					color: $grey;	
+				}
+				&:focus {
+					outline: none;
+				}
+			}
+			&[name=sub] {
+				margin-top: 33px;
+				text-align: left;
+			}
+			&[name=send] {
+				margin-top: 24px;
+				font-weight: 400;
+				font-size: 18px;
+				text-align: left;
+				padding: 3px 12px;
+				border: 3px solid $blue;
+				background-color: transparent;
+				color: $blue;
+				&:focus {
+					outline: none;
+				}
+			}
+		}
+	}
+}
+
+.animation_flex {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	width: 100%;
+	height: 100%;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	justify-content: space-around;
+	h1 {
+		width: 100%;
+		text-align: center;
+		margin: 30px;
+		color: $grey;
+		font-family: $font;
+		font-weight: 100;
+	}
+}
+
+.flexItem5 {
+	background-image: url(../img/building.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	transform: $noRotate;
+	width: 100%;
+	height: 666px;
+	text-align: center;
+	padding: $sides;
+	.title2 {
+		transform: skewY(0);
+		padding-top: 234px;
+		color: $grey;
+		font-size: 33px;
+	}
+	p {
+		transform: skewY(0);
+		text-align: justify;
+		font-family: $font;
+		font-weight: 100;
+		color: $grey;
+		font-weight: 100;
+		margin: 5% 10%;
+	}
+	
+	a {
+		text-decoration: none;
+		color: $blue;
+		font-family: $font;
+		font-weight: 100;
+		border: 1px solid $blue;
+		padding: 6px 12px;
+	}
+}
+
+.flexItem6 {
+	width: 45%;
+	height: 696px;
+	text-align: center;
+	padding-left: 5%;
+	padding-top: 69px;
+	transform: skewY(-9deg);
+}
+
+.container3 {
+	margin-top: -90px;
+	.social {
+	text-align: center;
+	img {
+		width:3%;
+		padding: 0.5%;
+	}
+	p {
+		font-family: $font;
+		font-size: 13px;
+		color: #999999;
+		font-weight: 100;
+		margin-top: 18px;
+	}
+}
+	.title3 {
+		display: none;
+	}
+}
+
+.container4 {
+	margin-top: 6px;
+	.social {
+	text-align: center;
+	img {
+		width:3%;
+		padding: 0.5%;
+	}
+	p {
+		font-family: $font;
+		font-size: 13px;
+		color: #999999;
+		font-weight: 100;
+		margin-top: 18px;
+	}
+}
+	.title3 {
+		display: none;
+	}
+}
+
+.dropdown {
+	display: none;
+}
+
+.dropdown2 {
+	display: none;
+}
+
+.dropdown3 {
+	display: none;
+}
+
+.dropdown4 {
+	display: none;
+}
+
+.dropdown5 {
+	display: none;
+}
+
+.menuContainer {
+	background-color: $darkGrey;
+	width: 100%;
+	margin-top: -99px;
+	transform: $rotate;
+	.titleAlt {
+		padding-top: 50px;
+		font-family: $font;
+		text-align: left;
+		color: $grey;
+		font-weight: 300;
+		font-size: 33px;
+		width: 60%;
+	}
+	.titleMenu {
+		text-align: center;
+		padding: $sides;
+		transform: $noRotate;
+	}
+	.p1 {
+		transform: $noRotate;
+		padding: 21px 10%;
+		text-align: left;
+		color: $grey;
+		font-family: $font;
+		font-weight: 100;
+		font-size: 18px;
+		margin-bottom: 30px;
+	}
+}
+
+.dropMenu {
+    background-image: url(../img/menu.svg);
+	background-color: transparent;
+	background-size: contain;
+	background-repeat: no-repeat;
+	position: relative;
+    padding: 3% 0px;
+	margin-top: 30px;
+    border: none;
+	width: 30px;
+	height: 30px;
+	&:hover {
+		outline: none;
+	}
+	&:focus {
+		outline: none;
+	}
+}
+
+.dropdownBurguer {
+	width: 100%;
+    position: relative;
+    display: inline-block;
+	text-align: left;
+	p {
+		font-family: $font;
+		color: $grey;
+		margin-top: 30px;
+		margin-bottom: 9px;
+		text-align: justify;
+	}
+}
+
+.dropdown-menu {
+    display: none;
+    position: relative;
+    background-color: $darkGrey;
+    width: 100%;
+    z-index: 1;
+	font-family: $font;
+	font-weight: 100;
+	a {
+		color: $blue;
+		padding: 12px 16px;
+		text-decoration: none;
+		display: block;
+		text-align: left;
+		&:hover {
+			background-color: $blue;
+			color: $darkGrey;
+		}
+		h3 {
+			font-weight: 100;
+			padding: 3px;
+		}
+	}
+}
+
+.show {
+	display:block;
+}
+
+.candContainer {
+	display: none;
+}
+
+.flexContainer2 {
+	padding: 0;
+	padding-top: 21px;
+	list-style: none;
+	width: 81%;
+	height: 100%;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	justify-content: space-around;
+	margin: 0% 9%;
+	.dropCand1 {
+		background-image: url(../img/cand1.png);
+		@include cand;
+	}
+	.dropCand2 {
+		background-image: url(../img/cand2.png);
+		@include cand;
+	}
+	.dropCand3 {
+		background-image: url(../img/cand3.png);
+		@include cand;
+	}
+	.dropCand4 {
+		background-image: url(../img/cand4.png);
+		@include cand;
+	}
+	.dropCand5 {
+		background-image: url(../img/cand5.png);
+		@include cand;
+	}
+	.dropCand6 {
+		background-image: url(../img/cand6.png);
+		@include cand;
+	}
+	.dropCand7 {
+		background-image: url(../img/cand7.png);
+		@include cand;
+	}
+	.dropCand8 {
+		background-image: url(../img/cand8.png);
+		@include cand;
+	}
+}
+
+@mixin box {
+	width: 60%;
+	height: 100%;
+	z-index: 1;
+	margin-bottom: 60px;
+	position: relative;
+}
+
+.box {
+	@include box;
+}
+
+.box2 {
+	@include box;
+}
+
+.box3 {
+	@include box;
+}
+
+.box4 {
+	@include box;
+}
+
+.box5 {
+	@include box;
+}
+
+.box6 {
+	@include box;
+}
+
+.box7 {
+	@include box;
+}
+
+.box8 {
+	@include box;
+}
+.box9 {
+	background: transparent !important;
+	@include box;
+}
+
+
+
+
+
+
+
